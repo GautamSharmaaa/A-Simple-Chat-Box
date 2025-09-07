@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Moving gradient keyframes */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Light mode gradient */
+.bg-gradient-animate-light {
+  background: linear-gradient(-45deg, #f0f4f8, #d9e4ec, #c7d2fe, #fbcfe8);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* Dark mode gradient */
+.bg-gradient-animate-dark {
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #312e81, #0f766e);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
